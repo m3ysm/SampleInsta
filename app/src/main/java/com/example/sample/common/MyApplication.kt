@@ -14,12 +14,12 @@ class MyApplication : MultiDexApplication() {
         startKoin {
             androidContext(this@MyApplication)
             modules(
-//                listOf(
-//                    apiModule,
-//                    useCaseModule,
-//                    viewModelModule,
-//                    repositoryModule
-//                )
+                listOf(
+                    apiModule,
+                    useCaseModule,
+                    viewModelModule,
+                    repositoryModule
+                )
             )
         }
     }

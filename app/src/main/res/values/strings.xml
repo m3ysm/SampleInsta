@@ -1,6 +1,6 @@
 <resources>
     <!-- Common -->
-    <string name="app_name">Batman Project</string>
+    <string name="app_name">Sample</string>
     <string name="all_error">Oops! Something Happened Wrong</string>
 
 
