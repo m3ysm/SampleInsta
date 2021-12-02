@@ -2,6 +2,6 @@ package com.example.sample.util
 
 object Constants {
 
-    const val BASE_URL = "http://www.omdbapi.com"
-    const val API_KEY = "3e974fca"
+    const val INSTAGRAM_BASIC_DISPLAY_BASE_URL = "https://api.instagram.com/"
+    const val INSTAGRAM_GRAPH_BASE_URL = "https://graph.instagram.com/"
 }
