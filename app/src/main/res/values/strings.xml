@@ -1,29 +1,8 @@
 <resources>
     <!-- Common -->
     <string name="app_name">Sample</string>
-    <string name="all_error">Oops! Something Happened Wrong</string>
-
 
     <!-- Progress Layout -->
-    <string name="progressLayout_pleaseWait">Please Wait</string>
+    <string name="progressLayout_pleaseWait">لطفا صبر کنید</string>
 
-    <!-- Home Fragment -->
-    <string name="homeFragment_toolbarTitle">Movie List</string>
-    <string name="homeFragment_menu_homePage">Movies</string>
-    <string name="homeFragment_menu_films">Films</string>
-    <string name="homeFragment_menu_series">Series</string>
-    <string name="homeFragment_details">Details</string>
-    <string name="homeFragment_year">Year:</string>
-    <string name="homeFragment_type">Type:</string>
-    <string name="homeFragment_comingSoon">Coming Soon...!</string>
-
-    <!-- Details Fragment -->
-    <string name="detailsFragment_toolbarTitle">Details</string>
-    <string name="detailsFragment_constraintDimensionRatio">H,0.85</string>
-    <string name="detailsFragment_plotTitle">Introduction:</string>
-    <string name="detailsFragment_durationTitle">Duration:</string>
-    <string name="detailsFragment_directorTitle">Director:</string>
-    <string name="detailsFragment_actorsTitle">Actors:</string>
-    <string name="detailsFragment_awardsTitle">Awards:</string>
-    <string name="detailsFragment_boxOfficeTitle">BoxOffice:</string>
 </resources>

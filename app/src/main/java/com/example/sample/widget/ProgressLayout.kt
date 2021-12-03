@@ -54,17 +54,6 @@ class ProgressLayout : RelativeLayout {
 
     fun setStatus(status: ProgressBarStatus, errorText: String = "") {
         when (status) {
-            // error
-            ProgressBarStatus.ERROR -> {
-                binding.progressLayoutRoot.visibility = View.VISIBLE
-                binding.progressLayoutTitle.text = context.getString(R.string.all_error)
-                binding.progressLayoutTitle.visibility = View.VISIBLE
-                binding.progressLayoutProgressBar.visibility = View.INVISIBLE
-                binding.progressLayoutRoot.visibility = View.VISIBLE
-                binding.progressLayoutTitle.text = errorText
-            }
-
-            // loading
             ProgressBarStatus.LOADING -> {
                 binding.progressLayoutRoot.visibility = View.VISIBLE
                 binding.progressLayoutTitle.text =
@@ -75,7 +64,6 @@ class ProgressLayout : RelativeLayout {
                 requestLayout()
             }
 
-            // done
             ProgressBarStatus.DONE -> {
                 binding.progressLayoutRoot.visibility = View.GONE
                 binding.progressLayoutTitle.text = ""
