@@ -1,10 +1,7 @@
 package com.example.sample.common
 
 import androidx.multidex.MultiDexApplication
-import com.example.sample.data.di.apiModule
-import com.example.sample.data.di.repositoryModule
-import com.example.sample.data.di.useCaseModule
-import com.example.sample.data.di.viewModelModule
+import com.example.sample.data.di.*
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -18,7 +15,8 @@ class MyApplication : MultiDexApplication() {
                     apiModule,
                     useCaseModule,
                     viewModelModule,
-                    repositoryModule
+                    repositoryModule,
+                    utilModule
                 )
             )
         }
