@@ -10,7 +10,7 @@
         android:id="@+id/holder"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="@dimen/width_all_0dp"
-        android:layout_height="@dimen/height_all_0dp"
+        android:layout_height="@dimen/dimension_all_0dp"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

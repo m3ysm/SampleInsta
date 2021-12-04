@@ -16,7 +16,7 @@
     <com.example.sample.widget.ProgressLayout
         android:id="@+id/progressLayout_getTokenFragment"
         android:layout_width="@dimen/width_all_0dp"
-        android:layout_height="@dimen/height_all_0dp"
+        android:layout_height="@dimen/dimension_all_0dp"
         android:elevation="@dimen/elevation_all_4dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"

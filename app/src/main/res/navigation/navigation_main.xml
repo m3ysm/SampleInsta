@@ -9,5 +9,18 @@
         android:id="@+id/getTokenFragment"
         android:name="com.example.sample.ui.gettoken.GetTokenFragment"
         android:label="fragment_get_token"
-        tools:layout="@layout/fragment_get_token" />
+        tools:layout="@layout/fragment_get_token" >
+        <action
+            android:id="@+id/action_getTokenFragment_to_userMediaFragment"
+            app:destination="@id/userMediaFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/userMediaFragment"
+        android:name="com.example.sample.ui.usermedia.UserMediaFragment"
+        android:label="fragment_user_media"
+        tools:layout="@layout/fragment_user_media" />
 </navigation>

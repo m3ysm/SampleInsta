@@ -90,8 +90,6 @@ dependencies {
     implementation "androidx.preference:preference-ktx:$preference"
     //Timber Logger
     implementation "com.jakewharton.timber:timber:$timber"
-    //Finding memory leaks by leak canary
-    debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakcanary"
     //Logging API requests
     debugImplementation "com.readystatesoftware.chuck:library:$chuckVersiosn"
     releaseImplementation "com.readystatesoftware.chuck:library-no-op:$chuckVersiosn"

@@ -14,10 +14,6 @@ import com.example.sample.widget.ProgressLayout
 
 class CustomWebView {
     @SuppressLint("SetJavaScriptEnabled")
-    companion object {
-        private const val REDIRECT_URL = "https://www.google.com/?code="
-    }
-
     fun init(
         webView: WebView,
         progressbar: ProgressLayout,
@@ -39,7 +35,7 @@ class CustomWebView {
                     url: String?,
                     isReload: Boolean
                 ) {
-                    if (!url.isNullOrBlank() && url.contains(REDIRECT_URL)) {
+                    if (!url.isNullOrBlank() && url.contains(Constants.REDIRECT_URL)) {
                         val code =
                             url.substring(url.indexOf("=") + 1, url.indexOf("#"))
                         listener?.invoke(code)
