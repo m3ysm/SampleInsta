@@ -1,5 +1,6 @@
 package com.example.sample.util.extensions
 
+import android.os.Bundle
 import android.view.Gravity
 import android.view.View
 import android.widget.TextView
@@ -32,4 +33,8 @@ fun Fragment.initToolbar(toolbar: MainToolbar) {
     toolbar.setOnBackPressedListener {
         findNavController().navigateUp()
     }
+}
+
+fun Fragment.navigateTo(actionId: Int, bundle: Bundle? = null) {
+    findNavController().navigate(actionId, bundle)
 }

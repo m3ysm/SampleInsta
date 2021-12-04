@@ -1,8 +1,6 @@
 package com.example.sample.data.di
 
-import com.example.sample.data.webservice.ChuckInterceptor
-import com.example.sample.data.webservice.LoggingInterceptor
-import com.example.sample.data.webservice.RetrofitServiceBuilder
+import com.example.sample.data.webservice.*
 import com.example.sample.util.Constants
 import okhttp3.OkHttpClient
 import org.koin.android.BuildConfig
@@ -13,35 +11,11 @@ import java.util.concurrent.TimeUnit
 
 val apiModule = module {
 
-    single(named("basicDisplay")) {
-        val okHttpBuilder = OkHttpClient().newBuilder()
-            .connectTimeout(50, TimeUnit.SECONDS)
-            .readTimeout(50, TimeUnit.SECONDS)
-            .writeTimeout(50, TimeUnit.SECONDS)
-            .addInterceptor(ChuckInterceptor.getInstance(androidApplication()))
-        if (BuildConfig.DEBUG) {
-            okHttpBuilder.addInterceptor(LoggingInterceptor.getInstance())
-        }
-        okHttpBuilder.build()
-    }
-
-    single(named("basicDisplay")) {
+    single(named("default")) {
         RetrofitServiceBuilder.buildRetrofit(
-            okHttpClient = get(named("basicDisplay")),
+            okHttpClient = get(named("default")),
             baseUrl = Constants.INSTAGRAM_BASIC_DISPLAY_BASE_URL
         )
-    }
-
-    single(named("graph")) {
-        val okHttpBuilder = OkHttpClient().newBuilder()
-            .connectTimeout(50, TimeUnit.SECONDS)
-            .readTimeout(50, TimeUnit.SECONDS)
-            .writeTimeout(50, TimeUnit.SECONDS)
-            .addInterceptor(ChuckInterceptor.getInstance(androidApplication()))
-        if (BuildConfig.DEBUG) {
-            okHttpBuilder.addInterceptor(LoggingInterceptor.getInstance())
-        }
-        okHttpBuilder.build()
     }
 
     single(named("graph")) {
@@ -49,5 +23,43 @@ val apiModule = module {
             okHttpClient = get(named("graph")),
             baseUrl = Constants.INSTAGRAM_GRAPH_BASE_URL
         )
+    }
+
+    single {
+        RetrofitServiceBuilder.buildService(
+            retrofit = get(named("default")),
+            service = InstagramBasicDisplayAPI::class.java
+        )
+    }
+
+    single {
+        RetrofitServiceBuilder.buildService(
+            retrofit = get(named("graph")),
+            service = InstagramGraphApi::class.java
+        )
+    }
+
+    single(named("default")) {
+        val okHttpBuilder = OkHttpClient().newBuilder()
+            .connectTimeout(Constants.REQUEST_TIME_OUT, TimeUnit.SECONDS)
+            .readTimeout(Constants.REQUEST_TIME_OUT, TimeUnit.SECONDS)
+            .writeTimeout(Constants.REQUEST_TIME_OUT, TimeUnit.SECONDS)
+            .addInterceptor(ChuckInterceptor.getInstance(androidApplication()))
+        if (BuildConfig.DEBUG) {
+            okHttpBuilder.addInterceptor(LoggingInterceptor.getInstance())
+        }
+        okHttpBuilder.build()
+    }
+
+    single(named("graph")) {
+        val okHttpBuilder = OkHttpClient().newBuilder()
+            .connectTimeout(Constants.REQUEST_TIME_OUT, TimeUnit.SECONDS)
+            .readTimeout(Constants.REQUEST_TIME_OUT, TimeUnit.SECONDS)
+            .writeTimeout(Constants.REQUEST_TIME_OUT, TimeUnit.SECONDS)
+            .addInterceptor(ChuckInterceptor.getInstance(androidApplication()))
+        if (BuildConfig.DEBUG) {
+            okHttpBuilder.addInterceptor(LoggingInterceptor.getInstance())
+        }
+        okHttpBuilder.build()
     }
 }
