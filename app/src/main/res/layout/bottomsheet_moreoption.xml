@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintLayout_moreOptionBottomSheet_rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="@dimen/dimension_all_0dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimension_all_0dp"
+        android:background="@drawable/bg_bottomsheet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,0.25"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="@dimen/verticalBias_all_layout_1">
+
+        <ImageView
+            android:id="@+id/imageView_bottomSheetList_line"
+            android:layout_width="@dimen/dimension_all_30dp"
+            android:layout_height="@dimen/dimension_all_4dp"
+            android:layout_marginTop="@dimen/margin_all_10dp"
+            android:background="@drawable/bottomsheet_line"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView_moreOptionBottomSheet_downloadIcon"
+            android:layout_width="@dimen/dimension_all_0dp"
+            android:layout_height="@dimen/dimension_all_0dp"
+            android:layout_marginRight="@dimen/margin_all_16dp"
+            android:paddingTop="@dimen/padding_all_16dp"
+            android:paddingBottom="@dimen/padding_all_16dp"
+            android:src="@drawable/ic_download"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_moreOptionBottomSheet_download"
+            app:layout_constraintDimensionRatio="0.5:1"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toRightOf="@+id/textView_moreOptionBottomSheet_download"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView_moreOptionBottomSheet_download" />
+
+        <TextView
+            android:id="@+id/textView_moreOptionBottomSheet_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iran_sans_mobile_medium"
+            android:paddingLeft="@dimen/padding_all_16dp"
+            android:paddingTop="@dimen/padding_all_16dp"
+            android:paddingRight="@dimen/padding_all_16dp"
+            android:paddingBottom="@dimen/padding_all_16dp"
+            android:text="@string/userMediaFragment_download"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize_all_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="@dimen/verticalBias_all_layout_1"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/imageView_moreOptionBottomSheet_downloadIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

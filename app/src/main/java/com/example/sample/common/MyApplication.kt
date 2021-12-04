@@ -16,7 +16,8 @@ class MyApplication : MultiDexApplication() {
                     useCaseModule,
                     viewModelModule,
                     repositoryModule,
-                    utilModule
+                    utilModule,
+                    StorageServiceModule
                 )
             )
         }

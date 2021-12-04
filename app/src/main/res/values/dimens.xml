@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Common Dimension -->
-    <dimen name="height_all_0dp">0dp</dimen>
+    <dimen name="dimension_all_0dp">0dp</dimen>
     <dimen name="width_all_0dp">0dp</dimen>
     <dimen name="margin_all_16dp">16dp</dimen>
     <dimen name="width_all_35dp">35dp</dimen>
@@ -28,6 +28,10 @@
     <dimen name="dimension_all_70dp">70dp</dimen>
     <dimen name="dimension_all_1dp">1dp</dimen>
     <dimen name="textSize_all_30sp">30sp</dimen>
+    <dimen name="verticalBias_all_layout_1">1</dimen>
+    <dimen name="dimension_all_30dp">30dp</dimen>
+    <dimen name="dimension_all_4dp">4dp</dimen>
+    <dimen name="padding_all_16dp">16dp</dimen>
 
     <!-- Details Fragment -->
     <integer name="diagonalAngle_detailsFragment_backImage">15</integer>

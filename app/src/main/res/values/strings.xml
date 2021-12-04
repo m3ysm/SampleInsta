@@ -7,5 +7,6 @@
 
     <!-- User Medi aFragment -->
     <string name="userMediaFragment_title">Instagram</string>
+    <string name="userMediaFragment_download">دانلود</string>
 
 </resources>
