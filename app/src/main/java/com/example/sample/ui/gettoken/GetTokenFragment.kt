@@ -13,6 +13,7 @@ import com.example.sample.ui.base.BaseFragment
 import com.example.sample.util.Constants
 import com.example.sample.util.CustomWebView
 import com.example.sample.util.extensions.navigateTo
+import com.example.sample.util.extensions.visible
 import org.koin.android.ext.android.inject
 
 class GetTokenFragment : BaseFragment() {
@@ -88,7 +89,7 @@ class GetTokenFragment : BaseFragment() {
     }
 
     private fun visibleProgressbar() {
-        binding.progressLayoutGetTokenFragment.visibility = View.VISIBLE
+        binding.progressLayoutGetTokenFragment.visible()
     }
 
     override fun onDestroyView() {

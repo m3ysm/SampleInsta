@@ -4,7 +4,8 @@
 
     <!-- Progress Layout -->
     <string name="progressLayout_pleaseWait">لطفا صبر کنید</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- User Medi aFragment -->
+    <string name="userMediaFragment_title">Instagram</string>
 
 </resources>

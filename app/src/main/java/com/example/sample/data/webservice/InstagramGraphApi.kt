@@ -24,7 +24,7 @@ interface InstagramGraphApi {
         @Query("access_token") accessToken: String
     ): Single<Response<ApiResponse<ArrayList<GetIdAndCaptionResponseModel>>>>
 
-    @GET("{user-id}?fields=id,media_type,media_url,username,timestamp")
+    @GET("{media-id}?fields=id,media_type,media_url,username,timestamp")
     fun getMediaData(
         @Path("media-id") mediaId: String,
         @Query("access_token") accessToken: String
