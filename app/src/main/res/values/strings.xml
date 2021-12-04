@@ -1,4 +1,12 @@
 <resources>
+    <!-- Common -->
     <string name="app_name">Sample</string>
-    <string name="facebook_app_id">1347582909025320</string>
+
+    <!-- Progress Layout -->
+    <string name="progressLayout_pleaseWait">لطفا صبر کنید</string>
+
+    <!-- User Medi aFragment -->
+    <string name="userMediaFragment_title">Instagram</string>
+    <string name="userMediaFragment_download">دانلود</string>
+
 </resources>
